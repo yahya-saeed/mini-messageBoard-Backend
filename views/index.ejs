@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>ejs</title>
+  </head>
+  <body>
+    <h1>Messages</h1>
+
+    <div class="big-box">
+      <% messages.forEach((message) => { %>
+      <div class="container">
+        <h3><%= message.text %></h3>
+        <h5><%= message.user %></h5>
+      </div>
+      <% }) %>
+    </div>
+    <div class="btn">
+      <button><a href="/new">New Message</a></button>
+    </div>
+  </body>
+</html>
